@@ -93,7 +93,7 @@ namespace Client_Detector
 				else
 				{
 					Nameplates.Add(PlayerExtensions.GetAPIUser(player).id, new NameplateText(player.GetVRCPlayer(), "Client User", new Vector2( 0f, 100f), Color.red));
-					MelonLogger.Msg($"{player.GetName()} has been detected, this user most likely has a client");
+					MelonLogger.Msg($"{player.GetName()} has been detected");
 				}
 				return ClientSeek.ClientDetectionLevel.Using;
 			}
