@@ -1,5 +1,5 @@
 # Client-Detector
-Detects when someone is likely using a Modified Client in your lobby
+Detects when someone is likely using a Modified Client in your lobby, also displays it above their nameplate
 
 # How does it work?
 This is done by seeing if their FPS, ping, or whether their custom properties are all valid, if they are not then they will be detected.
