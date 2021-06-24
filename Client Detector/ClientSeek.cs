@@ -81,7 +81,7 @@ namespace Client_Detector
 
 		private static ClientSeek.ClientDetectionLevel DetectUser(Player player)
 		{
-			if (player.GetPlayerPing() < 0 || (player.GetPlayerFrames() < 10 && player.GetPlayerFrames() != 0) || ClientSeek.PlayerIsSpoofingQuest(player) || (player.GetPlayerFrames() > 200 || player.GetPlayerPing() > 1000 || player.GetPlayerPing() == 666))
+			if (player.GetPlayerPing() < 0 || (player.GetPlayerFrames() < 10 && player.GetPlayerFrames() != 0) || ClientSeek.PlayerIsSpoofingQuest(player) || (player.GetPlayerFrames() > 200 || player.GetPlayerPing() > 1000 && !player.IsQuest()))
 			{
 				if (Nameplates.ContainsKey(PlayerExtensions.GetAPIUser(player).id))
 				{
