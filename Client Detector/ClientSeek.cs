@@ -21,7 +21,7 @@ namespace Client_Detector
 		public static IEnumerator CheckPlayers()
         {
 			for(; ; )
-            {
+			{ 
 				if(PlayerExtensions.IsInWorld())
                 {
 					yield return QueuePlayerActions(delegate (Player player)
@@ -31,7 +31,7 @@ namespace Client_Detector
 							DetectUser(player);
 						}
                         catch
-						{
+						{ 
                         }
 					}, 0.5f);
 				}
@@ -41,7 +41,6 @@ namespace Client_Detector
                 }
 			}
 			yield break;
-
 		}
 		public static IEnumerator QueuePlayerActions(Action<Player> OnPlayerAction, float WaitBetweenPlayer)
 		{
