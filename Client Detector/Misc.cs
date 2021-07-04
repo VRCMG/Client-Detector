@@ -1,22 +1,22 @@
-﻿using System;
+﻿using MelonLoader;
+using System;
 using System.Collections;
-using MelonLoader;
 using UnityEngine;
 
 namespace Client_Detector
 {
-		internal static class Misc
-		{
-			public static IEnumerator DelayAction(float delay, Action action)
-			{
-				yield return new WaitForSeconds(delay);
-				action();
-				yield break;
-			}
+    internal static class Misc
+    {
+        public static IEnumerator DelayAction(float delay, Action action)
+        {
+            yield return new WaitForSeconds(delay);
+            action();
+            yield break;
+        }
 
-			public static void Start(this IEnumerator e)
-			{
-				MelonCoroutines.Start(e);
-			}
-		}
-	}
+        public static void Start(this IEnumerator e)
+        {
+            MelonCoroutines.Start(e);
+        }
+    }
+}
